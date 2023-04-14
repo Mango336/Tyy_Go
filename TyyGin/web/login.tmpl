@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> 登录页面  </title>
+</head>
+<body>
+    <!-- action 指向下一个url 也就是向该url发送表单数据 -->
+    <form action="/login" method="post"> 
+        <label for="username">username: </label>
+        <input type="text" name="username" id="username">
+        <label for="password">password: </label>
+        <input type="text" name="password" id="password">
+        <input type="submit" name="login" value="Login">
+    </form>
+</body>
+</html>
