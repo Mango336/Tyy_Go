@@ -54,7 +54,7 @@ func BindQueryString(c *gin.Context) {
 			"age":  data.Age,
 		})
 	} else {
-		log.Fatalln(err.Error())
+		log.Println(err.Error())
 	}
 }
 
@@ -70,7 +70,7 @@ func BindJson(c *gin.Context) {
 			"age":  data.Age,
 		})
 	} else {
-		log.Fatalln(err.Error())
+		log.Println(err.Error())
 	}
 }
 
@@ -84,6 +84,6 @@ func BindForm(c *gin.Context) {
 			"age":  data.Age,
 		})
 	} else {
-		log.Fatalln(err.Error())
+		log.Println(err.Error())
 	}
 }

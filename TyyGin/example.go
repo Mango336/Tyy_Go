@@ -1,12 +1,13 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
-func example() {
+func Example() {
 	r := gin.Default()
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
@@ -14,7 +15,10 @@ func example() {
 		})
 	})
 	LoadTemplate(r)
-	r.Run(":9090") // listen :9090
+	err := r.Run(":9090") // listen :9090
+	if err != nil {
+		log.Fatalln(err.Error())
+	}
 }
 
 // 加载Template html
